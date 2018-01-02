@@ -1,3 +1,4 @@
 <header class="site-header" role="banner">
-
+  <a href="{{ "/" | relative_url }}" class="{% if page.section == "proposals" %}active{% endif %}">Proposals</a>
+  <a href="{{ "/clients/" | relative_url }}" class="{% if page.section == "clients" %}active{% endif %}">Clients</a>
 </header>
