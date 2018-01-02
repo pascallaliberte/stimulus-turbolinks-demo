@@ -1,0 +1,8 @@
+- client: Client name
+  options:
+    - title: Option Title
+      price: $4000 for the project
+    - title: Option Title
+      price: $3000 per week
+    - title: Option Title
+      price: $400 per half-day

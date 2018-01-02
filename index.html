@@ -15,42 +15,29 @@ section: proposals
     </div>
   </header>
   
+  {% for proposal in site.data.proposals %}
   <div class="row proposal">
     <div class="col-md-4">
       <strong class="d-block text-uppercase">For</strong>
-      <h2 class="proposal-client-name">Client name</h2>
+      <h2 class="proposal-client-name">{{ proposal.client }}</h2>
       <a href="#">Edit</a>&nbsp;|
       <a href="#">Export PDF</a>&nbsp;|
       <a href="#">Archive</a>
     </div>
     <div class="col-md-8">
-      <strong>Option A</strong>
+      {% for option in proposal.options %}
+      <strong>Option {% cycle 'A', 'B', 'C' %}</strong>
       <div class="row align-items-baseline">
         <div class="col-auto">
-          <h3>Option Title</h3>
+          <h3>{{ option.title }}</h3>
         </div>
         <div class="col-auto ml-auto">
-          $5000 for the project
+          {{ option.price }}
         </div>
       </div>
-      <strong>Option B</strong>
-      <div class="row">
-        <div class="col-auto">
-          <h3>Option Title</h3>
-        </div>
-        <div class="col-auto ml-auto">
-          $3000 per week
-        </div>
-      </div>
-      <strong>Option C</strong>
-      <div class="row">
-        <div class="col-auto">
-          <h3>Option Title</h3>
-        </div>
-        <div class="col-auto ml-auto">
-          $400 per half-day
-        </div>
-      </div>
+      {% endfor %}
     </div>
   </div>
+  {% endfor %}
+  
 </div>
