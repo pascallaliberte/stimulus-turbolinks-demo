@@ -1,0 +1,15 @@
+.btn {
+  color: $color-text;
+}
+
+.btn-default {
+  background-color: $brand-primary;
+  padding: rem(2px) rem(12px);
+  font-weight: 500;
+  font-size: rem(12px);
+}
+
+.page-content header .btn {
+  vertical-align: bottom;
+  margin-left: rem(15px);
+}

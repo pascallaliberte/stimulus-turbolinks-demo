@@ -1,9 +1,22 @@
 body {
-  background-color: #F3D93C;
+  background-color: $brand-primary;
   font-size: 20px;
   display: flex;
   align-items: stretch;
   height: 100vh;
+  color: $color-text;
+}
+
+h1, h2, h3 {
+  color: $color-text;
+}
+
+a {
+  color: $color-link;
+  transition: color 0.2s ease;
+  &:hover, &:active {
+    color: darken($color-link, 10%);
+  }
 }
 
 .page-wrapper {
@@ -14,4 +27,19 @@ body {
   border-radius: rem(5px) rem(5px) 0 0;
   overflow: hidden;
   width: 100%;
+}
+
+.page-content .wrapper {
+  padding: rem(30px);
+  
+  header.row {
+    align-items: baseline;
+    padding-bottom: rem(5px);
+    margin-bottom: rem(15px);
+    border-bottom: rem(4px) solid $brand-primary;
+    
+    h1 {
+      margin-bottom: 0;
+    }
+  }
 }
