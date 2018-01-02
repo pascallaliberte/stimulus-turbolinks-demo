@@ -1686,24 +1686,36 @@ var _class = function (_Controller) {
     key: "toggle",
     value: function toggle(event) {
       event.preventDefault();
-      var button = event.target;
-      var container = this.element;
-      var menu = this.menu;
 
-      if (button.getAttribute('aria-expanded') == "false") {
-        button.setAttribute('aria-expanded', "true");
-        container.classList.add('show');
-        menu.classList.add('show');
+      if (this.button.getAttribute('aria-expanded') == "false") {
+        this.show();
       } else {
-        button.setAttribute('aria-expanded', "false");
-        container.classList.remove('show');
-        menu.classList.remove('show');
+        this.hide();
       }
+    }
+  }, {
+    key: "show",
+    value: function show() {
+      this.button.setAttribute('aria-expanded', "true");
+      this.element.classList.add('show');
+      this.menu.classList.add('show');
+    }
+  }, {
+    key: "hide",
+    value: function hide() {
+      this.button.setAttribute('aria-expanded', "false");
+      this.element.classList.remove('show');
+      this.menu.classList.remove('show');
     }
   }, {
     key: "menu",
     get: function get() {
       return this.targets.find("menu");
+    }
+  }, {
+    key: "button",
+    get: function get() {
+      return this.targets.find("button");
     }
   }]);
 
