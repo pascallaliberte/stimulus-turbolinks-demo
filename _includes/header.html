@@ -1,4 +1,28 @@
-<header class="site-header" role="banner">
-  <a href="{{ "/" | relative_url }}" class="{% if page.section == "proposals" %}active{% endif %}">Proposals</a>
-  <a href="{{ "/clients/" | relative_url }}" class="{% if page.section == "clients" %}active{% endif %}">Clients</a>
-</header>
+<nav class="site-header navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Proposahoy!</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto w-100">
+      <li class="nav-item {% if page.section == "proposals" %}active{% endif %}">
+        <a class="nav-link" href="{{ "/" | relative_url }}">Proposals {% if page.section == "proposals" %}<span class="sr-only">(current)</span>{% endif %}</a>
+      </li>
+      <li class="nav-item {% if page.section == "clients" %}active{% endif %}">
+        <a class="nav-link" href="{{ "/clients/" | relative_url }}">Clients {% if page.section == "proposals" %}<span class="sr-only">(current)</span>{% endif %}</a>
+      </li>
+      <li class="nav-item ml-auto dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Account
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Settings</a>
+          <a class="dropdown-item" href="#">Help</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Logout</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
