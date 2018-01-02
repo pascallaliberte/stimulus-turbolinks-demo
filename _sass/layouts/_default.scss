@@ -1,0 +1,17 @@
+body {
+  background-color: #F3D93C;
+  font-size: 20px;
+  display: flex;
+  align-items: stretch;
+  height: 100vh;
+}
+
+.page-wrapper {
+  margin-top: rem(20px);
+  margin-left: rem(20px);
+  margin-right: rem(150px);
+  background-color: transparentize(white, 0.3);
+  border-radius: rem(5px) rem(5px) 0 0;
+  overflow: hidden;
+  width: 100%;
+}
