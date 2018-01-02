@@ -8,16 +8,18 @@ module.exports = {
     publicPath: '/assets/',
     filename: 'main.js'
   },
+  devtool: "source-map",
+
   module: {
-    // Special compilation rules
-    loaders: [
+    rules: [
       {
-        // Ask webpack to check: If this file ends with .js, then apply some transforms
         test: /\.js$/,
-        // Transform it with babel
-        loader: 'babel',
-        // don't transform node_modules folder (which don't need to be compiled)
-        exclude: /node_modules/
+        exclude: [
+          /node_modules/
+        ],
+        use: [
+          { loader: "babel-loader" }
+        ]
       }
     ]
   }

@@ -12,11 +12,11 @@
       <li class="nav-item {% if page.section == "clients" %}active{% endif %}">
         <a class="nav-link" href="{{ "/clients/" | relative_url }}">Clients {% if page.section == "proposals" %}<span class="sr-only">(current)</span>{% endif %}</a>
       </li>
-      <li class="nav-item ml-auto dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <li class="nav-item ml-auto dropdown" data-controller="dropdown">
+        <a class="nav-link dropdown-toggle" data-action="click->dropdown#toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Account
         </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <div class="dropdown-menu" data-target="dropdown.menu">
           <a class="dropdown-item" href="#">Settings</a>
           <a class="dropdown-item" href="#">Help</a>
           <div class="dropdown-divider"></div>
