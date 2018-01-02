@@ -3,10 +3,12 @@
 }
 
 .btn-default {
-  background-color: $brand-primary;
-  padding: rem(2px) rem(12px);
+  background-color: white;
+  padding: rem(3px) rem(10px);
   font-weight: 500;
-  font-size: rem(12px);
+  font-size: rem(10px);
+  border-radius: rem(8px);
+  border: rem(4px) solid transparentize($brand-primary, 0);
 }
 
 .page-content header .btn {
