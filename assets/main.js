@@ -1685,8 +1685,20 @@ var _class = function (_Controller) {
   }
 
   _createClass(_class, [{
-    key: "toggle",
+    key: 'connect',
+    value: function connect() {
+      console.log('dropdown#connect');
+    }
+  }, {
+    key: 'disconnect',
+    value: function disconnect() {
+      console.log('dropdown#disconnect');
+    }
+  }, {
+    key: 'toggle',
     value: function toggle(event) {
+      console.log('dropdown#toggle');
+
       event.stopPropagation();
 
       if (this.button.getAttribute('aria-expanded') == "false") {
@@ -1696,14 +1708,14 @@ var _class = function (_Controller) {
       }
     }
   }, {
-    key: "show",
+    key: 'show',
     value: function show() {
       this.button.setAttribute('aria-expanded', "true");
       this.element.classList.add('show');
       this.menu.classList.add('show');
     }
   }, {
-    key: "hide",
+    key: 'hide',
     value: function hide(event) {
       if (event.target == this.menu) {
         event.preventDefault();
@@ -1714,12 +1726,12 @@ var _class = function (_Controller) {
       this.menu.classList.remove('show');
     }
   }, {
-    key: "menu",
+    key: 'menu',
     get: function get() {
       return this.targets.find("menu");
     }
   }, {
-    key: "button",
+    key: 'button',
     get: function get() {
       return this.targets.find("button");
     }
