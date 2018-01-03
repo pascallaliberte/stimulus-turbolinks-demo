@@ -5,6 +5,8 @@
     color: black;
   }
   
+  border-radius: rem(5px) rem(5px) 0 0;
+  
   position: absolute;
   top: 0;
   left: 0;
@@ -17,4 +19,10 @@
 
 .navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
   color: $color-text;
+}
+
+.navbar-brand {
+  transform: scale(1.2) rotate(-2deg);
+  margin-left: 20px;
+  margin-right: 40px;
 }
