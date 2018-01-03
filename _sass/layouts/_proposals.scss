@@ -32,6 +32,7 @@
 .proposal-client {
   margin-top: 0.2em;
   margin-left: rem(-5px);
+  transform: rotate(-2deg);
   & > * {
     display: inline-block;
     background-color: white;
