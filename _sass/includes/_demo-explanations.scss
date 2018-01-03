@@ -1,0 +1,53 @@
+.demo-explanations-container {
+  width: 100%;
+  max-width: $max-width;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.demo-explanations {
+  position: absolute;
+  bottom: 0;
+  background-color: transparentize($color-explanations, 0.2);
+  width: rem(150px);
+  max-height: calc(100vh - 2rem);
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  
+  padding: rem(15px);
+  border-radius: rem(5px) rem(5px) 0 0;
+  &, h1, h2, h3 {
+    color: mix(white, $color-explanations, 90%);
+  }
+  
+  font-size: rem(9px);
+  
+  h1 {
+    font-size: 1.2em;
+  }
+  
+  a {
+    color: white;
+    text-decoration: underline;
+  }
+  
+  ul, ol {
+    padding-left: 1.1rem;
+    li {
+      margin-bottom: 0.5em;
+    }
+  }
+  
+  right: rem(20px);
+}
+
+.demo-suggestions {
+  border-top: rem(1px) solid transparentize(white, 0.5);
+  padding-top: rem(8px);
+}
+
+.demo-intro {
+  color: white;
+}
