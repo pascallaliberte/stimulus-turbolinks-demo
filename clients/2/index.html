@@ -1,0 +1,6 @@
+---
+---
+
+{% for client in site.data.clients offset:5 limit:5 %}
+  {% include client.html client=client %}
+{% endfor %}

@@ -15,4 +15,6 @@ section: clients
   {% for client in site.data.clients limit:5 %}
     {% include client.html client=client %}
   {% endfor %}
+  
+  <div data-behavior="more-clients">Loading More...</div>
 </div>
