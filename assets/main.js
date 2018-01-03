@@ -1639,8 +1639,8 @@ function getIdentifierForContextKey(key) {
 
 var map = {
 	"./dropdown_controller.js": 30,
-	"./more-clients_controller.js": 33,
-	"./preview-proposals_controller.js": 32
+	"./more-clients_controller.js": 31,
+	"./preview-proposals_controller.js": 34
 };
 function webpackContext(req) {
 	return __webpack_require__(webpackContextResolve(req));
@@ -1685,20 +1685,8 @@ var _class = function (_Controller) {
   }
 
   _createClass(_class, [{
-    key: 'connect',
-    value: function connect() {
-      console.log('dropdown#connect');
-    }
-  }, {
-    key: 'disconnect',
-    value: function disconnect() {
-      console.log('dropdown#disconnect');
-    }
-  }, {
-    key: 'toggle',
+    key: "toggle",
     value: function toggle(event) {
-      console.log('dropdown#toggle');
-
       event.stopPropagation();
 
       if (this.button.getAttribute('aria-expanded') == "false") {
@@ -1708,14 +1696,14 @@ var _class = function (_Controller) {
       }
     }
   }, {
-    key: 'show',
+    key: "show",
     value: function show() {
       this.button.setAttribute('aria-expanded', "true");
       this.element.classList.add('show');
       this.menu.classList.add('show');
     }
   }, {
-    key: 'hide',
+    key: "hide",
     value: function hide(event) {
       if (event.target == this.menu) {
         event.preventDefault();
@@ -1726,12 +1714,12 @@ var _class = function (_Controller) {
       this.menu.classList.remove('show');
     }
   }, {
-    key: 'menu',
+    key: "menu",
     get: function get() {
       return this.targets.find("menu");
     }
   }, {
-    key: 'button',
+    key: "button",
     get: function get() {
       return this.targets.find("button");
     }
@@ -1743,63 +1731,13 @@ var _class = function (_Controller) {
 /* harmony default export */ __webpack_exports__["default"] = (_class);
 
 /***/ }),
-/* 31 */,
-/* 32 */
+/* 31 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_stimulus__ = __webpack_require__(0);
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-
-
-var _class = function (_Controller) {
-  _inherits(_class, _Controller);
-
-  function _class() {
-    _classCallCheck(this, _class);
-
-    return _possibleConstructorReturn(this, (_class.__proto__ || Object.getPrototypeOf(_class)).apply(this, arguments));
-  }
-
-  _createClass(_class, [{
-    key: "show",
-    value: function show(event) {
-      event.preventDefault();
-
-      if (this.numProposals > 1) {
-        alert("would preview the " + this.numProposals + " pitched proposals");
-      } else {
-        alert("would preview the pitched proposal");
-      }
-    }
-  }, {
-    key: "numProposals",
-    get: function get() {
-      return parseInt(this.data.get('amount'));
-    }
-  }]);
-
-  return _class;
-}(__WEBPACK_IMPORTED_MODULE_0_stimulus__["b" /* Controller */]);
-
-/* harmony default export */ __webpack_exports__["default"] = (_class);
-
-/***/ }),
-/* 33 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_stimulus__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_in_viewport__ = __webpack_require__(34);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_in_viewport__ = __webpack_require__(32);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_in_viewport___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_in_viewport__);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -1875,7 +1813,7 @@ var _class = function (_Controller) {
 /* harmony default export */ __webpack_exports__["default"] = (_class);
 
 /***/ }),
-/* 34 */
+/* 32 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global) {module.exports = inViewport;
@@ -2160,10 +2098,10 @@ function observeDOM(watches, container, cb) {
   }
 }
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(35)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(33)))
 
 /***/ }),
-/* 35 */
+/* 33 */
 /***/ (function(module, exports) {
 
 var g;
@@ -2188,6 +2126,55 @@ try {
 
 module.exports = g;
 
+
+/***/ }),
+/* 34 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_stimulus__ = __webpack_require__(0);
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+
+
+var _class = function (_Controller) {
+  _inherits(_class, _Controller);
+
+  function _class() {
+    _classCallCheck(this, _class);
+
+    return _possibleConstructorReturn(this, (_class.__proto__ || Object.getPrototypeOf(_class)).apply(this, arguments));
+  }
+
+  _createClass(_class, [{
+    key: "show",
+    value: function show(event) {
+      event.preventDefault();
+
+      if (this.numProposals > 1) {
+        alert("would preview the " + this.numProposals + " pitched proposals");
+      } else {
+        alert("would preview the pitched proposal");
+      }
+    }
+  }, {
+    key: "numProposals",
+    get: function get() {
+      return parseInt(this.data.get('amount'));
+    }
+  }]);
+
+  return _class;
+}(__WEBPACK_IMPORTED_MODULE_0_stimulus__["b" /* Controller */]);
+
+/* harmony default export */ __webpack_exports__["default"] = (_class);
 
 /***/ })
 /******/ ]);

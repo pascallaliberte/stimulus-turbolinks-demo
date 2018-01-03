@@ -28,10 +28,33 @@ a {
   margin-right: rem(150px);
   background-color: transparentize(white, 0.3);
   border-radius: rem(5px) rem(5px) 0 0;
-  overflow: hidden;
   position: relative;
   width: 100%;
   height: calc(100vh - 2rem);
+  
+  &::before, &::after {
+    z-index: -1;
+    content: ' ';
+    position: absolute;
+  }
+  
+  &::before {
+    top: rem(-8px);
+    left: rem(-8px);
+    right: rem(-8px);
+    bottom: rem(-8px);
+    border-radius: rem(11px) rem(11px) 0 0;
+    border: rem(1px) solid transparentize(white, 0.6);
+  }
+  
+  &::after {
+    top: rem(-18px);
+    left: rem(-18px);
+    right: rem(-18px);
+    bottom: rem(-18px);
+    border-radius: rem(20px) rem(20px) 0 0;
+    border: rem(1px) solid transparentize(white, 0.8);
+  }
 }
 
 .page-content {
