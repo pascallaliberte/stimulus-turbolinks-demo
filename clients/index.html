@@ -18,15 +18,16 @@ section: clients
       <img src="{{ client.avatar_url }}" class="client-img">
     </div>
     <div class="col-md-auto">
-      <h2>{{ client.first }} 
-        <strong class="last-name">{{ client.last }}</strong>
+      <h2>
+          {{ client.first }} 
+          <strong class="last-name">{{ client.last }}</strong>
       </h2>
-      <p>{{ client.company }}</p>
-    </div>
-    {% if client.proposals > 0 %}
-    <div class="col-md-auto ml-auto">
-        <a href="#">
-          {{ client.proposals }}
+      <a href="#" class="">
+        Edit
+      </a>
+      {% if client.proposals > 0 %}
+        &bull; <a href="#" class="dropdown-toggle">
+          Show {{ client.proposals }}
           {% if client.proposals == 1 %}
             proposal
           {% else %}
@@ -34,8 +35,11 @@ section: clients
           {% endif %}
           pitched
         </a>
+      {% endif %}
     </div>
-    {% endif %}
+    <div class="col-md-auto ml-auto">
+      <p>at {{ client.company }}</p>
+    </div>
   </div>
   {% endfor %}
 </div>
