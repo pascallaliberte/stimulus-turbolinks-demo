@@ -12,34 +12,7 @@ section: clients
     </div>
   </header>
   
-  {% for client in site.data.clients limit:10 %}
-  <div class="row client align-items-baseline">
-    <div class="col-md-2">
-      <img src="{{ client.avatar_url }}" class="client-img">
-    </div>
-    <div class="col-md-auto">
-      <h2>
-          {{ client.first }} 
-          <strong class="last-name">{{ client.last }}</strong>
-      </h2>
-      <a href="#" class="">
-        Edit
-      </a>
-      {% if client.proposals > 0 %}
-        &bull; <a href="#" class="dropdown-toggle">
-          Show {{ client.proposals }}
-          {% if client.proposals == 1 %}
-            proposal
-          {% else %}
-            proposals
-          {% endif %}
-          pitched
-        </a>
-      {% endif %}
-    </div>
-    <div class="col-md-auto ml-auto">
-      <p>at {{ client.company }}</p>
-    </div>
-  </div>
+  {% for client in site.data.clients limit:5 %}
+    {% include client.html client=client %}
   {% endfor %}
 </div>

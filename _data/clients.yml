@@ -1,10 +1,21 @@
 - first: Daniel
   last: Ackerman
   company: First Street Bakery
-  avatar_url: https://api.adorable.io/avatars/120/dan@firststreetbakery.com.png
+  avatar_url: https://avatars.dicebear.com/v1/male/Herman%20West/200.png
   proposals: 1
+- first: Manon
+  last: Goulet
+  company: Productions Vive Voix
+  avatar_url: https://avatars.dicebear.com/v1/female/Beulah%20Wolfe/200.png
 - first: Greg
   last: O'Malley
   company: River Run Media
-  avatar_url: https://api.adorable.io/avatars/120/greg@riverrunmedia.co.png
-  proposals: 0
+  avatar_url: https://avatars.dicebear.com/v1/male/Billy%20Hawkins/200.png
+- first: Jean-Philippe
+  last: Sanssouci
+  company: JayFlip Media
+  avatar_url: https://avatars.dicebear.com/v1/male/Alan%20Cobb/200.png
+- first: Susan
+  last: Smith-Maven
+  company: 
+  avatar_url: https://avatars.dicebear.com/v1/female/Josephine%20Bennett/200.png

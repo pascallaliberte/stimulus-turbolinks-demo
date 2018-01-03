@@ -28,11 +28,20 @@ a {
   background-color: transparentize(white, 0.3);
   border-radius: rem(5px) rem(5px) 0 0;
   overflow: hidden;
+  position: relative;
   width: 100%;
+  height: calc(100vh - 2rem);
+}
+
+.page-content {
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  height: calc(100vh - 2rem);
 }
 
 .page-content .wrapper {
   padding: rem(30px);
+  padding-top: rem(60px);
   
   header.row {
     align-items: baseline;
