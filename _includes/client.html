@@ -12,7 +12,8 @@
     </a>
     {% if client.proposals > 0 %}
       <span data-controller="preview-proposals" data-preview-proposals-amount="{{ client.proposals }}">
-        &bull; <a href="#" class="dropdown-toggle" data-action="click->preview-proposals#show">
+        <span class="separator" aria-hidden="true">/</span>
+        <a href="#" class="dropdown-toggle" data-action="click->preview-proposals#show">
           Show {{ client.proposals }}
           {% if client.proposals == 1 %}
             proposal
@@ -26,7 +27,7 @@
   </div>
   <div class="col-md-auto ml-auto">
     {% if client.company %}
-      <p>at <strong>{{ client.company }}</strong></p>
+      <p>of <strong>{{ client.company }}</strong></p>
     {% endif %}
   </div>
 </div>

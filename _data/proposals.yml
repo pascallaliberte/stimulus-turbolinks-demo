@@ -1,8 +1,13 @@
-- client: Client name
+- client: Daniel Ackerman
+  company: First Street Bakery
+  valid_for: 60 days
   options:
-    - title: Option Title
-      price: $4000 for the project
-    - title: Option Title
-      price: $3000 per week
-    - title: Option Title
-      price: $400 per half-day
+    - title: Top-to-Bottom CMS Theme Update
+      price: $4000
+      unit: for the project
+    - title: Your Web Guy on Retainer
+      price: $700
+      unit: per month
+    - title: Quick Spot Check
+      price: $400
+      unit: per half-day

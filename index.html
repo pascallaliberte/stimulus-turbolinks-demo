@@ -11,28 +11,38 @@ section: proposals
       <button class="btn btn-default">New Proposal 💡</button>
     </div>
     <div class="col-auto ml-auto">
-      <a href="#">Archived (3)</a>
+      <strong>Current</strong>&nbsp;<span class="separator" aria-hidden="true">/</span>
+      <a href="#">Archived (2)</a>
     </div>
   </header>
   
   {% for proposal in site.data.proposals %}
   <div class="row proposal">
     <div class="col-md-4">
-      <strong class="d-block text-uppercase">For</strong>
-      <h2 class="proposal-client-name">{{ proposal.client }}</h2>
-      <a href="#">Edit</a>&nbsp;&bull;
-      <a href="#">Export PDF</a>&nbsp;&bull;
-      <a href="#">Archive</a>
+      <strong class="d-block text-uppercase proposal-client-for">Prepared For</strong>
+      <div class="proposal-client">
+        <h2 class="proposal-client-name">{{ proposal.client }}</h2><br>
+        {% if proposal.company %}
+          <p class="proposal-client-company">of <strong>{{ proposal.company }}</strong></p>
+        {% endif %}
+      </div>
+      {% if proposal.valid_for %}
+        <p>Valid for <strong>{{ proposal.valid_for }}</strong></p>
+      {% endif %}
+      <a href="#">View / Edit Full Proposal</a><br>
+      <a href="#">Export PDF&hellip;</a><br>
+      <a href="#">Archive&hellip;</a>
     </div>
     <div class="col-md-8">
       {% for option in proposal.options %}
-      <strong>Option {% cycle 'A', 'B', 'C' %}</strong>
-      <div class="row align-items-baseline">
-        <div class="col-auto">
-          <h3>{{ option.title }}</h3>
+      <div class="row align-items-end proposal-option">
+        <div class="col">
+          <strong class="d-block text-uppercase proposal-option-label">Option {% cycle 'A', 'B', 'C' %}</strong>
+          <h3>{{ option.title }} <span class="has-details">&hellip;</span></h3>
         </div>
-        <div class="col-auto ml-auto">
-          {{ option.price }}
+        <div class="col-auto ml-auto text-right proposal-price">
+          <strong>{{ option.price }}</strong><br>
+          {{ option.unit }}
         </div>
       </div>
       {% endfor %}

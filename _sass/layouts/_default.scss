@@ -54,3 +54,11 @@ a {
     }
   }
 }
+
+.separator {
+  font-weight: bold;
+  color: $brand-primary;
+  display: inline-block;
+  padding-left: rem(3px);
+  padding-right: rem(3px);
+}
