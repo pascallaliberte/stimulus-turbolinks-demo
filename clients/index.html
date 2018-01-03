@@ -16,7 +16,7 @@ section: clients
     {% include client.html client=client %}
   {% endfor %}
   
-  <div data-controller="more-clients" data-more-clients-url="{{ "/clients/2/" | prepend: site.url }}">Loading More...</div>
+  <div data-controller="more-clients" data-more-clients-url="{{ "/clients/2/" | prepend: site.baseurl }}">Loading More...</div>
 </div>
 
 <div class="demo-explanations-container">

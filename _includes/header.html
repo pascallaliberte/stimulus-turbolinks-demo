@@ -1,5 +1,5 @@
 <nav class="site-header navbar navbar-expand-lg navbar-light">
-  <a class="navbar-brand" href="{{ "/" | prepend: site.url }}">Propos<strong>ahoy!</strong> ⚓️</a>
+  <a class="navbar-brand" href="{{ "/" | prepend: site.baseurl }}">Propos<strong>ahoy!</strong> ⚓️</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -7,10 +7,10 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto w-100">
       <li class="nav-item {% if page.section == "proposals" %}active{% endif %}">
-        <a class="nav-link" href="{{ "/" | prepend: site.url }}">Proposals {% if page.section == "proposals" %}<span class="sr-only">(current)</span>{% endif %}</a>
+        <a class="nav-link" href="{{ "/" | prepend: site.baseurl }}">Proposals {% if page.section == "proposals" %}<span class="sr-only">(current)</span>{% endif %}</a>
       </li>
       <li class="nav-item {% if page.section == "clients" %}active{% endif %}">
-        <a class="nav-link" href="{{ "/clients/" | prepend: site.url }}">Clients {% if page.section == "proposals" %}<span class="sr-only">(current)</span>{% endif %}</a>
+        <a class="nav-link" href="{{ "/clients/" | prepend: site.baseurl }}">Clients {% if page.section == "proposals" %}<span class="sr-only">(current)</span>{% endif %}</a>
       </li>
       <li class="nav-item ml-auto dropdown" data-controller="dropdown">
         <a class="nav-link dropdown-toggle" data-action="click->dropdown#toggle click@window->dropdown#hide" data-target="dropdown.button" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
