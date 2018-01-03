@@ -11,15 +11,17 @@
       Edit
     </a>
     {% if client.proposals > 0 %}
-      &bull; <a href="#" class="dropdown-toggle">
-        Show {{ client.proposals }}
-        {% if client.proposals == 1 %}
-          proposal
-        {% else %}
-          proposals
-        {% endif %}
-        pitched
-      </a>
+      <span data-controller="preview-proposals" data-preview-proposals-amount="{{ client.proposals }}">
+        &bull; <a href="#" class="dropdown-toggle" data-action="click->preview-proposals#show">
+          Show {{ client.proposals }}
+          {% if client.proposals == 1 %}
+            proposal
+          {% else %}
+            proposals
+          {% endif %}
+          pitched
+        </a>
+      </span>
     {% endif %}
   </div>
   <div class="col-md-auto ml-auto">
