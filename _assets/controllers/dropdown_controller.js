@@ -1,17 +1,7 @@
 import { Controller } from "stimulus"
 
 export default class extends Controller {
-  connect() {
-    console.log('dropdown#connect')
-  }
-  
-  disconnect() {
-    console.log('dropdown#disconnect')
-  }
-  
   toggle(event) {
-    console.log('dropdown#toggle')
-    
     event.stopPropagation()
     
     if (this.button.getAttribute('aria-expanded') == "false") {
