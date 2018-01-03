@@ -2,12 +2,12 @@ import { Controller } from "stimulus"
 
 export default class extends Controller {
   toggle(event) {
-    event.preventDefault()
+    event.stopPropagation()
     
     if (this.button.getAttribute('aria-expanded') == "false") {
       this.show()
     } else {
-      this.hide()
+      this.hide(event)
     }
   }
   
@@ -17,12 +17,16 @@ export default class extends Controller {
     this.menu.classList.add('show')
   }
   
-  hide() {
+  hide(event) {
+    if (event.target == this.menu) {
+      event.preventDefault()
+      return
+    }
     this.button.setAttribute('aria-expanded', "false")
     this.element.classList.remove('show')
     this.menu.classList.remove('show')
   }
-
+  
   get menu() {
     return this.targets.find("menu")
   }

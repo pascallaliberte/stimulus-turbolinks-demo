@@ -1685,12 +1685,12 @@ var _class = function (_Controller) {
   _createClass(_class, [{
     key: "toggle",
     value: function toggle(event) {
-      event.preventDefault();
+      event.stopPropagation();
 
       if (this.button.getAttribute('aria-expanded') == "false") {
         this.show();
       } else {
-        this.hide();
+        this.hide(event);
       }
     }
   }, {
@@ -1702,7 +1702,11 @@ var _class = function (_Controller) {
     }
   }, {
     key: "hide",
-    value: function hide() {
+    value: function hide(event) {
+      if (event.target == this.menu) {
+        event.preventDefault();
+        return;
+      }
       this.button.setAttribute('aria-expanded', "false");
       this.element.classList.remove('show');
       this.menu.classList.remove('show');
