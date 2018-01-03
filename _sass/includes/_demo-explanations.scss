@@ -12,6 +12,10 @@
   position: absolute;
   bottom: 0;
   background-color: transparentize($color-explanations, 0.2);
+  
+  -webkit-backdrop-filter: saturate(180%) blur(10px);
+  backdrop-filter: saturate(180%) blur(10px);
+  
   width: rem(150px);
   max-height: calc(100vh - 2rem);
   overflow-y: scroll;
