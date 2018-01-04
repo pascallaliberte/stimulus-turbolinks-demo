@@ -20,7 +20,10 @@ section: clients
 </div>
 
 <div class="demo-explanations-container">
-  <div class="demo-explanations">
+  <div class="demo-explanations" data-controller="collapse">
+    <button class="d-inline-block d-md-none btn btn-link text-uppercase demo-explanations-toggle" data-target="collapse.button" data-action="click->collapse#toggle" data-alt-text="Hide" aria-expanded="false">Show</button>
+    
+    <h2 class="demo-explanations-label text-uppercase">Explanation</h2>
     <h1><a href="{{ site.github.repository_url }}">Stimulus + Turbolinks Demo</a></h1>
     <p>by <a href="http://pascallaliberte.me/">Pascal Laliberté</a></p>
     <p class="demo-intro"><a href="https://github.com/stimulusjs/stimulus">Stimulus</a> (by <a href="https://basecamp.com/">Basecamp</a>) adds listeners on elements as they appear on the page. <a href="https://github.com/turbolinks/turbolinks">Turbolinks</a> (also by Basecamp) loads the next page via pjax. All the HTML is rolled server-side.</p>
