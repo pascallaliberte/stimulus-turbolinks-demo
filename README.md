@@ -13,6 +13,8 @@ Both of these together make for a sweet combination to add touches of interactio
 
 This demo app was made to show off the Stimulus-based controllers that get connected to and disconnected from elements as they're added or removed from the DOM, and to show off the snappiness you get between pages with Turbolinks.
 
+Currently running `stimulus@0.9.0`. Will update for `1.0` soon!
+
 Hope it's useful!
 
 -- [Pascal Laliberté](http://pascallaliberte.me)
