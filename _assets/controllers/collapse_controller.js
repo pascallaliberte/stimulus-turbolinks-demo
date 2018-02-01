@@ -1,24 +1,26 @@
 import { Controller } from "stimulus"
 
 export default class extends Controller {
+  static targets = [ "button" ]
+  
   toggle(event) {
     event.stopPropagation()
     
-    if (this.button.getAttribute('aria-expanded') == "false") {
+    if (this.buttonTarget.getAttribute('aria-expanded') == "false") {
       this.show()
     } else {
       this.hide(event)
     }
     
-    if (this.button.dataset.altText) {
-      let oldText = this.button.textContent
-      this.button.textContent = this.button.dataset.altText
-      this.button.dataset.altText = oldText  
+    if (this.buttonTarget.dataset.altText) {
+      let oldText = this.buttonTarget.textContent
+      this.buttonTarget.textContent = this.buttonTarget.dataset.altText
+      this.buttonTarget.dataset.altText = oldText  
     }
   }
   
   show() {
-    this.button.setAttribute('aria-expanded', "true")
+    this.buttonTarget.setAttribute('aria-expanded', "true")
     this.element.classList.add('show')
   }
   
@@ -27,11 +29,7 @@ export default class extends Controller {
       event.preventDefault()
       return
     }
-    this.button.setAttribute('aria-expanded', "false")
+    this.buttonTarget.setAttribute('aria-expanded', "false")
     this.element.classList.remove('show')
-  }
-  
-  get button() {
-    return this.targets.find("button")
   }
 }

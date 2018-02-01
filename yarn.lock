@@ -2,25 +2,25 @@
 # yarn lockfile v1
 
 
-"@stimulus/core@^0.9.0":
-  version "0.9.0"
-  resolved "https://registry.yarnpkg.com/@stimulus/core/-/core-0.9.0.tgz#b6a0e7836b6e88fe6ea0c2055cc10b47f3a2b2ee"
+"@stimulus/core@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@stimulus/core/-/core-1.0.0.tgz#8192c3a61b210d88daa58284a1bb7bf4b8443ff6"
   dependencies:
-    "@stimulus/mutation-observers" "^0.9.0"
+    "@stimulus/mutation-observers" "^1.0.0"
 
 "@stimulus/multimap@^0.9.0":
   version "0.9.0"
   resolved "https://registry.yarnpkg.com/@stimulus/multimap/-/multimap-0.9.0.tgz#ed63699b3efb273411c118a50955569b2565a6e8"
 
-"@stimulus/mutation-observers@^0.9.0":
-  version "0.9.0"
-  resolved "https://registry.yarnpkg.com/@stimulus/mutation-observers/-/mutation-observers-0.9.0.tgz#f2249b660d9c3c8a4a43bc2c66dcb8b18d2c8f0c"
+"@stimulus/mutation-observers@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@stimulus/mutation-observers/-/mutation-observers-1.0.0.tgz#5a54cf78ce697b72f47a7c4f4594c024a7c2656e"
   dependencies:
     "@stimulus/multimap" "^0.9.0"
 
-"@stimulus/webpack-helpers@^0.9.0":
-  version "0.9.0"
-  resolved "https://registry.yarnpkg.com/@stimulus/webpack-helpers/-/webpack-helpers-0.9.0.tgz#b655c233015bea0d02b66ec709ef15b4b0060a57"
+"@stimulus/webpack-helpers@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@stimulus/webpack-helpers/-/webpack-helpers-1.0.0.tgz#f38b8281182436085d3472dc963dcbd81d731141"
 
 abbrev@1:
   version "1.1.1"
@@ -330,6 +330,10 @@ babel-plugin-syntax-async-functions@^6.8.0:
   version "6.13.0"
   resolved "https://registry.yarnpkg.com/babel-plugin-syntax-async-functions/-/babel-plugin-syntax-async-functions-6.13.0.tgz#cad9cad1191b5ad634bf30ae0872391e0647be95"
 
+babel-plugin-syntax-class-properties@^6.8.0:
+  version "6.13.0"
+  resolved "https://registry.yarnpkg.com/babel-plugin-syntax-class-properties/-/babel-plugin-syntax-class-properties-6.13.0.tgz#d7eb23b79a317f8543962c505b827c7d6cac27de"
+
 babel-plugin-syntax-exponentiation-operator@^6.8.0:
   version "6.13.0"
   resolved "https://registry.yarnpkg.com/babel-plugin-syntax-exponentiation-operator/-/babel-plugin-syntax-exponentiation-operator-6.13.0.tgz#9ee7e8337290da95288201a6a57f4170317830de"
@@ -345,6 +349,15 @@ babel-plugin-transform-async-to-generator@^6.22.0:
     babel-helper-remap-async-to-generator "^6.24.1"
     babel-plugin-syntax-async-functions "^6.8.0"
     babel-runtime "^6.22.0"
+
+babel-plugin-transform-class-properties@^6.24.1:
+  version "6.24.1"
+  resolved "https://registry.yarnpkg.com/babel-plugin-transform-class-properties/-/babel-plugin-transform-class-properties-6.24.1.tgz#6a79763ea61d33d36f37b611aa9def81a81b46ac"
+  dependencies:
+    babel-helper-function-name "^6.24.1"
+    babel-plugin-syntax-class-properties "^6.8.0"
+    babel-runtime "^6.22.0"
+    babel-template "^6.24.1"
 
 babel-plugin-transform-es2015-arrow-functions@^6.22.0:
   version "6.22.0"
@@ -2364,12 +2377,12 @@ sshpk@^1.7.0:
     jsbn "~0.1.0"
     tweetnacl "~0.14.0"
 
-stimulus@0.9.0:
-  version "0.9.0"
-  resolved "https://registry.yarnpkg.com/stimulus/-/stimulus-0.9.0.tgz#4e9f994fdf6df261913221b149451d6ad1a54b30"
+stimulus@^1.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/stimulus/-/stimulus-1.0.0.tgz#a9215f23f8efe243bcc6adcc86691d68e2c0779e"
   dependencies:
-    "@stimulus/core" "^0.9.0"
-    "@stimulus/webpack-helpers" "^0.9.0"
+    "@stimulus/core" "^1.0.0"
+    "@stimulus/webpack-helpers" "^1.0.0"
 
 stream-browserify@^2.0.1:
   version "2.0.1"
