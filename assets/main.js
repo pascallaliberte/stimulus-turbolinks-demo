@@ -1902,49 +1902,41 @@ var _class = function (_Controller) {
   }
 
   _createClass(_class, [{
-    key: "toggle",
+    key: 'toggle',
     value: function toggle(event) {
       event.stopPropagation();
+      event.preventDefault();
 
-      if (this.button.getAttribute('aria-expanded') == "false") {
+      if (this.buttonTarget.getAttribute('aria-expanded') == "false") {
         this.show();
       } else {
         this.hide(event);
       }
     }
   }, {
-    key: "show",
+    key: 'show',
     value: function show() {
-      this.button.setAttribute('aria-expanded', "true");
+      this.buttonTarget.setAttribute('aria-expanded', "true");
       this.element.classList.add('show');
-      this.menu.classList.add('show');
+      this.menuTarget.classList.add('show');
     }
   }, {
-    key: "hide",
+    key: 'hide',
     value: function hide(event) {
-      if (event.target == this.menu) {
+      if (event.target == this.menuTarget) {
         event.preventDefault();
         return;
       }
-      this.button.setAttribute('aria-expanded', "false");
+      this.buttonTarget.setAttribute('aria-expanded', "false");
       this.element.classList.remove('show');
-      this.menu.classList.remove('show');
-    }
-  }, {
-    key: "menu",
-    get: function get() {
-      return this.targets.find("menu");
-    }
-  }, {
-    key: "button",
-    get: function get() {
-      return this.targets.find("button");
+      this.menuTarget.classList.remove('show');
     }
   }]);
 
   return _class;
 }(__WEBPACK_IMPORTED_MODULE_0_stimulus__["b" /* Controller */]);
 
+_class.targets = ['menu', 'button'];
 /* harmony default export */ __webpack_exports__["default"] = (_class);
 
 /***/ }),
