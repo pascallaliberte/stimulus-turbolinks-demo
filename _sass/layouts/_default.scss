@@ -25,7 +25,7 @@ a {
 .page-wrapper {
   background-color: transparentize(white, 0.3);
   position: relative;
-  
+
   @media (min-width: 768px) {
     margin-top: rem(20px);
     margin-left: rem(20px);
@@ -33,7 +33,7 @@ a {
     border-radius: rem(5px) rem(5px) 0 0;
     width: 100%;
     height: calc(100vh - 2rem);
-    
+
     &::before {
       top: rem(-8px);
       left: rem(-8px);
@@ -42,7 +42,7 @@ a {
       border: rem(1px) solid transparentize(white, 0.6);
       border-bottom: none;
     }
-    
+
     &::after {
       top: rem(-18px);
       left: rem(-18px);
@@ -50,7 +50,7 @@ a {
       border-radius: rem(20px) rem(20px) 0 0;
       border: rem(1px) solid transparentize(white, 0.8);
     }
-    
+
     &::before, &::after {
       z-index: -1;
       content: ' ';
@@ -64,32 +64,32 @@ a {
 .page-content {
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
-  
+
   height: 100vh;
-  
+
   @media (min-width: 768px) {
     height: calc(100vh - 2rem);
-    
+
   }
 }
 
 .page-content .wrapper {
-  
+
   padding: rem(20px);
   padding-top: rem(90px);
   padding-bottom: rem(100px);
-  
+
   @media (min-width: 768px) {
     padding: rem(30px);
     padding-top: rem(60px);
   }
-  
+
   header.row {
     align-items: baseline;
     padding-bottom: rem(10px);
     margin-bottom: rem(15px);
     border-bottom: rem(4px) solid $brand-primary;
-    
+
     h1 {
       margin-bottom: 0;
     }

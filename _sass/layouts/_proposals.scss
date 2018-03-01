@@ -6,7 +6,7 @@
   margin-bottom: rem(15px);
   padding-bottom: rem(10px);
   border-bottom: rem(3px) solid $brand-primary;
-  
+
   h3 {
     margin-bottom: 0;
     .has-details {
@@ -19,7 +19,7 @@
       cursor: pointer;
     }
   }
-  
+
   &:last-of-type {
     border-bottom: none;
   }

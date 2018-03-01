@@ -11,18 +11,18 @@ section: clients
       <button class="btn btn-default">New client 💪</button>
     </div>
   </header>
-  
+
   {% for client in site.data.clients limit:5 %}
     {% include client.html client=client %}
   {% endfor %}
-  
+
   <div data-controller="more-clients" data-more-clients-url="{{ "/clients/2/" | prepend: site.baseurl }}">Loading More...</div>
 </div>
 
 <div class="demo-explanations-container">
   <div class="demo-explanations" data-controller="collapse">
     <button class="d-inline-block d-md-none btn btn-link text-uppercase demo-explanations-toggle" data-target="collapse.button" data-action="click->collapse#toggle" data-alt-text="Hide" aria-expanded="false">Show</button>
-    
+
     <h2 class="demo-explanations-label text-uppercase">Explanation</h2>
     <h1>Stimulus + Turbolinks Demo <a class="github-link" href="{{ site.github.repository_url }}">View on GitHub</a></h1>
     <p>by <a href="http://pascallaliberte.me/">Pascal Laliberté</a></p>
@@ -30,8 +30,8 @@ section: clients
     <div class="demo-suggestions">
       <p><strong>To see it in action</strong>:</p>
       <ol>
-        <li><strong>Click to show Daniel's proposal</strong>. 
-          <a href="{{ site.github.repository_url }}/blob/master/_includes/client.html#L14-L16">That link&nbsp;🔍</a> is 
+        <li><strong>Click to show Daniel's proposal</strong>.
+          <a href="{{ site.github.repository_url }}/blob/master/_includes/client.html#L14-L16">That link&nbsp;🔍</a> is
           <a href="{{ site.github.repository_url }}/blob/master/_assets/controllers/preview-proposals_controller.js">enabled by Stimulus&nbsp;🔍</a>.</li>
         <li><strong>Scroll down to see Jean-Philippe</strong>. His entry was added via ajax after the page load, and the proposal link is also enabled by Stimulus.</li>
       </ol>

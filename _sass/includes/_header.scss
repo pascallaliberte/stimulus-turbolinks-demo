@@ -4,15 +4,15 @@
     text-decoration: none;
     color: black;
   }
-  
+
   border-radius: rem(5px) rem(5px) 0 0;
-  
+
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   z-index: 1;
-  
+
   -webkit-backdrop-filter: saturate(180%) blur(10px);
   backdrop-filter: saturate(180%) blur(10px);
 }
@@ -37,7 +37,7 @@
     width: auto !important;
     z-index: -1;
   }
-  
+
   .nav-item-proposals, .nav-item-clients {
     position: fixed;
     top: rem(45px);
@@ -45,7 +45,7 @@
     padding-right: rem(13px);
     background-color: #FBF3CA;
     border-radius: rem(17px);
-    
+
     &.active {
       &::before {
         position: absolute;
@@ -60,15 +60,15 @@
       }
     }
   }
-  
+
   .nav-item-proposals {
     right: 50%;
   }
-  
+
   .nav-item-clients {
     left: 50%;
   }
-  
+
   .nav-item.dropdown {
     text-align: right;
     padding-right: rem(10px);
