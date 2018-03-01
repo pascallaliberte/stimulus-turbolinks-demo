@@ -11,25 +11,25 @@
 .demo-explanations {
   position: absolute;
   background-color: transparentize($color-explanations, 0.2);
-  
+
   -webkit-backdrop-filter: saturate(180%) blur(10px);
   backdrop-filter: saturate(180%) blur(10px);
-  
+
   width: calc(100vw - 6rem);
   bottom: calc(-100vh + 22rem);
   height: calc(100vh - 15rem);
   right: rem(30px);
-  
+
   transition: bottom 0.5s cubic-bezier(.5,-0.18,.1,1.27);
-  
+
   @media (max-width: 767px) {
     &.show {
       bottom: 0;
       overflow-y: scroll;
       -webkit-overflow-scrolling: touch;
-    }  
+    }
   }
-  
+
   @media (min-width: 768px) {
     width: rem(150px);
     bottom: 0;
@@ -37,34 +37,34 @@
     height: auto;
     max-height: calc(100vh - 2rem);
   }
-  
+
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
-  
+
   padding: rem(15px);
   border-radius: rem(5px) rem(5px) 0 0;
   &, h1, h2, h3 {
     color: mix(white, $color-explanations, 90%);
   }
-  
+
   font-size: rem(11px);
-  
+
   @media (min-width: 768px) {
     font-size: rem(9px);
   }
-  
+
   h1 {
     font-size: 1.2em;
     .github-link {
       font-size: 0.75em;
     }
   }
-  
+
   a {
     color: white;
     text-decoration: underline;
   }
-  
+
   ul, ol {
     padding-left: 1.1rem;
     li {
@@ -93,7 +93,7 @@
   top: rem(5px);
   right: rem(5px);
   padding: rem(2px) rem(7px);
-  
+
   &, &:hover, &:focus {
     background-color: white;
     color: transparentize($color-explanations, 0.1);
