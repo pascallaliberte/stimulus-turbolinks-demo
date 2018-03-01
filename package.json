@@ -4,8 +4,8 @@
   "description": "Demo of Stimulus and Turbolinks",
   "main": "app.js",
   "scripts": {
-    "build": "webpack -p",
-    "watch": "webpack --watch",
+    "build": "webpack --mode production",
+    "watch": "webpack --watch --mode development",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Pascal Laliberté <pascal@pascallaliberte.me>",
@@ -13,11 +13,14 @@
   "dependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
-    "babel-preset-env": "^1.6.1",
     "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-preset-env": "^1.6.1",
     "in-viewport": "^3.6.0",
     "stimulus": "^1.0",
     "turbolinks": "^5.0.3",
-    "webpack": "^3.10.0"
+    "webpack": "4"
+  },
+  "devDependencies": {
+    "webpack-cli": "^2.0.9"
   }
 }
