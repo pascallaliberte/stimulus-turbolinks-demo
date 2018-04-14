@@ -8,7 +8,7 @@
   width: 100%;
   height: auto;
   border-radius: 10%;
-  transform: rotate(-2deg);
+  transform: rotate3d(0, 0, 1, -2deg);
 
   @media (max-width: 767px) {
     display: inline-block;
