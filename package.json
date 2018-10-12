@@ -16,7 +16,7 @@
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-preset-env": "^1.6.1",
     "in-viewport": "^3.6.0",
-    "stimulus": "^1.0",
+    "stimulus": "1.1",
     "turbolinks": "^5.0.3",
     "webpack": "4"
   },
